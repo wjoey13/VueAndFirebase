@@ -14,7 +14,9 @@
         </ul>
         <h2>Navagation controls</h2>
         <ul>
+            <li><button @click="goBack">Go Back</button></li>
             <li><button @click="goHome">Redirect to Home</button></li>
+            <li><button @click="goForward">Go Forward</button></li>
         </ul>
     </nav>
 </template>
@@ -29,6 +31,12 @@ export default {
     methods:{
         goHome(){
             this.$router.push({name: 'Home'})
+        },
+        goBack(){
+            this.$router.go(-1)
+        },
+        goForward(){
+            this.$router.go(+1)
         }
     }
 }
@@ -40,5 +48,9 @@ ul{
 }
 a{
     color: 42b983;
+}
+li{
+    display: inline-block;
+    margin: 10px;
 }
 </style>

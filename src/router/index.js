@@ -6,6 +6,7 @@ import ViewProfile from '@/components/ViewProfile'
 Vue.use(Router)
 
 export default new Router({
+    // helps with getting rid of the # in the url for local server mode: 'history',
     routes: [{
             path: '/',
             name: 'Home',
